@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güzel Pide Dijital Menü</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('Foto/arkaplan.png'); /* Arka plan resmi */
+            background-size: cover; /* Resmi tam kapla */
+            background-position: center; /* Ortala */
+            background-attachment: fixed; /* Sayfa kaydıkça arka plan sabit kalsın */
+            color: #fff; /* Yazı rengi okunabilir olsun */
+        }
+
+        /* Navbar Stili */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7); /* Yarı saydam siyah */
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Menü Stili */
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            backdrop-filter: blur(5px); /* Menü içeriğine bulanıklık efekti */
+        }
+
+        .menu-item {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8); /* Yarı saydam beyaz */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 1); /* Hover sırasında daha belirgin */
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-item h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 1rem;
+            padding: 5px 0;
+        }
+
+        /* Mobil uyumluluk için medya sorguları */
+        @media (max-width: 768px) {
+            .menu-container {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .menu-item h3 {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-item img {
+                height: 120px;
+            }
+
+            .menu-item h3 {
+                font-size: 0.8rem;
+                padding: 4px 0;
+            }
+
+            .navbar h1 {
+                font-size: 1.5rem;
+            }
+
+            /* Adjust layout for smaller screens */
+            .menu-container {
+                grid-template-columns: 1fr 1fr; /* Two items per row */
+            }
+
+            .menu-item {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .menu-item img {
+                height: 100px; /* Smaller images for very small screens */
+            }
+
+            .menu-item h3 {
+                font-size: 0.7rem;
+                padding: 3px 0;
+            }
+        }
+        html, body {
+    overflow-x: hidden;
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Güzel Pide</h1>
+    </div>
+
+    <!-- Menü -->
+    <div class="menu-container">
+        <a href="pideler.html" class="menu-item">
+            <img src="Foto/pidekapak.png" alt="Pideler">
+            <h3>Pideler</h3>
+        </a>
+        <a href="lahmacunlar.html" class="menu-item">
+            <img src="Foto/lahmacunkapak.png" alt="Lahmacunlar">
+            <h3>Lahmacunlar</h3>
+        </a>
+        <a href="kiremitler.html" class="menu-item">
+            <img src="Foto/kiremitkapak.png" alt="Kiremitler">
+            <h3>Kiremitler</h3>
+        </a>
+        <a href="pizzalar.html" class="menu-item">
+            <img src="Foto/pizzakapak.png" alt="Pizzalar">
+            <h3>Pizzalar</h3>
+        </a>
+        <a href="tatlilar.html" class="menu-item">
+            <img src="Foto/Tatlılarkapak.png" alt="Tatlılar">
+            <h3>Tatlılar</h3>
+        </a>
+        <a href="icecekler.html" class="menu-item">
+            <img src="Foto/içeceklerkapak.png" alt="İçecekler">
+            <h3>İçecekler</h3>
+        </a>
+    </div>
+</body>
+</html>
