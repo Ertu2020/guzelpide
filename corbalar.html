@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çorbalar</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Foto/arkaplan.png'); /* Arka plan resmi */
+    background-size: cover; /* Resmi tam kapla */
+    background-position: center; /* Ortala */
+    background-attachment: fixed; /* Sabit arka plan */
+    background-repeat: no-repeat; /* Tekrar etmeyi önler */
+    min-height: 100vh; /* Mobil cihazlarda tam yüksekliği kapsar */
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam siyah */
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+/* Kategori Menü */
+.category-menu {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+        gap: 15px; /* Fotoğraflar büyüdüğü için aralık artırıldı */
+        margin: 10px 0;
+    }
+
+    .category-item {
+        position: relative;
+        flex: 0 0 auto;
+        text-align: center;
+        width: 120px; /* Genişlik artırıldı */
+        text-decoration: none;
+        color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-item img {
+        width: 100%; /* Fotoğrafı kapsayıcı olacak şekilde tam genişlik */
+        height: 100px; /* Yükseklik artırıldı */
+        object-fit: cover;
+        display: block;
+    }
+
+    .category-item span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+
+    .category-item:hover span {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Ürün Listesi */
+    .product-list {
+        padding: 20px;
+    }
+
+        /* Ürün Listesi */
+        .product-list {
+            padding: 20px;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Yarı saydam beyaz */
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h3 {
+            margin: 0 0 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .product-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .product-price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Çorbalar</h1>
+    </div>
+
+    <!-- Kategori Menü -->
+    <div class="category-menu">
+        <a href="pideler.html" class="category-item">
+            <img src="Foto/pidekapak.png" alt="Pideler">
+            <span>Pideler</span>
+        </a>
+        <a href="lahmacunlar.html" class="category-item">
+            <img src="Foto/lahmacunkapak.png" alt="Lahmacunlar">
+            <span>Lahmacunlar</span>
+        </a>
+        <a href="kiremitler.html" class="category-item">
+            <img src="Foto/kiremitkapak.png" alt="Kiremitler">
+            <span>Kiremitler</span>
+        </a>
+        <a href="pizzalar.html" class="category-item">
+            <img src="Foto/pizzakapak.png" alt="Pizzalar">
+            <span>Pizzalar</span>
+        </a>
+        <a href="corbalar.html" class="category-item">
+            <img src="Foto/corbakapak.png" alt="Çorbalar">
+            <span>Çorbalar</span>
+        </a>
+        <a href="tatlilar.html" class="category-item">
+            <img src="Foto/Tatlılarkapak.png" alt="Tatlılar">
+            <span>Tatlılar</span>
+        </a>
+        <a href="icecekler.html" class="category-item">
+            <img src="Foto/içeceklerkapak.png" alt="İçecekler">
+            <span>İçecekler</span>
+        </a>
+       
+    </div>
+
+    <!-- Ürün Listesi -->
+    <div class="product-list">
+        <div class="product-item">
+            <img src="Foto/mercimekcorbasi.jpg" alt="Mercimek">
+            <div class="product-info">
+                <h3>Mercimek</h3>
+            </div>
+            <div class="product-price">160 TL</div>
+        </div>
+        <div class="product-item">
+            <img src="Foto/kellepacacorbasi.png" alt="Kelle Paça">
+            <div class="product-info">
+                <h3>Kelle Paça</h3>
+            </div>
+            <div class="product-price">200 TL</div>
+        </div>
+        <div class="product-item">
+            <img src="Foto/iskembecorbasi.jpg" alt="İşkembe">
+            <div class="product-info">
+                <h3>İşkembe</h3>
+            </div>
+            <div class="product-price">180 TL</div>
+        </div>
+        <div class="product-item">
+            <img src="Foto/mercimekcorbasi.jpg" alt="Karışık">
+            <div class="product-info">
+                <h3>Karışık</h3>
+            </div>
+            <div class="product-price">220 TL</div>
+        </div>
+    </div>
+</body>
+</html>
